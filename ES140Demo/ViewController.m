@@ -35,13 +35,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self goToGoogle];
 }
 
 - (IBAction)googleButtonPushed:(UIBarButtonItem*)sender {
+    [self goToGoogle];
 }
 - (IBAction)facebookButtonPushed:(UIBarButtonItem *)sender {
+    [self goToFacebook];
 }
 - (IBAction)backButtonPushed:(UIBarButtonItem *)sender {
+    [self.webview goBack];
 }
 
 
