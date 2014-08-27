@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIWebView *webview;
 
 @end
 
@@ -18,6 +19,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)googleButtonPushed:(UIBarButtonItem*)sender {
+}
+- (IBAction)facebookButtonPushed:(UIBarButtonItem *)sender {
+}
+- (IBAction)backButtonPushed:(UIBarButtonItem *)sender {
 }
 
 - (void)didReceiveMemoryWarning

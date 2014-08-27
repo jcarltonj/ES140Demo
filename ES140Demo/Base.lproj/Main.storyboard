@@ -25,16 +25,31 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Google" id="VPS-Jh-4wF"/>
+                                    <barButtonItem title="Google" id="VPS-Jh-4wF">
+                                        <connections>
+                                            <action selector="googleButtonPushed:" destination="vXZ-lx-hvc" id="wdw-SS-nLq"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="PR7-3F-CHf"/>
-                                    <barButtonItem title="Facebook" id="coL-dX-pyx"/>
+                                    <barButtonItem title="Facebook" id="coL-dX-pyx">
+                                        <connections>
+                                            <action selector="facebookButtonPushed:" destination="vXZ-lx-hvc" id="FBE-LH-wi3"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="NSG-ff-dOy"/>
-                                    <barButtonItem title="Back" id="qLr-yo-ykQ"/>
+                                    <barButtonItem title="Back" id="qLr-yo-ykQ">
+                                        <connections>
+                                            <action selector="backButtonPushed:" destination="vXZ-lx-hvc" id="sVD-nz-zfr"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="webview" destination="mK0-0P-FSP" id="r4t-2W-j3e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
