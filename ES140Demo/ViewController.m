@@ -15,11 +15,28 @@
 
 @implementation ViewController
 
+#pragma mark - GoTos
+-(void) goToGoogle
+{
+    [self goToURLWithString:@"http://google.com"];
+}
+-(void) goToFacebook
+{
+    [self goToURLWithString:@"http://facebook.com"];
+}
+-(void) goToURLWithString: (NSString *) urlString
+{
+    NSURL * url = [NSURL URLWithString:urlString];
+    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:url];
+    [self.webview loadRequest: urlRequest];
+}
+
+#pragma mark - Setup
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
+
 - (IBAction)googleButtonPushed:(UIBarButtonItem*)sender {
 }
 - (IBAction)facebookButtonPushed:(UIBarButtonItem *)sender {
@@ -27,10 +44,5 @@
 - (IBAction)backButtonPushed:(UIBarButtonItem *)sender {
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
